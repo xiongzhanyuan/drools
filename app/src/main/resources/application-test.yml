@@ -1,0 +1,24 @@
+# 设置tomcat的最大线程
+server:
+  tomcat:
+    max-threads: 600
+# spring primary datasource 配置
+spring:
+  ds:
+    driver: com.mysql.jdbc.Driver
+    url: jdbc:mysql://bj-cdb-1kvfxx85.sql.tencentcdb.com:63799/yueshen?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: yueshen521
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    filters: stat
+    pool:
+      minIdle: 3
+      maxActive: 20
+
+
